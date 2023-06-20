@@ -111,11 +111,16 @@ const ERROR_SENTINEL = '__ErrorSentinel';
  * @typedef {{sentinel: '__ErrorSentinel', message: string, code?: string, stack?: string, cause?: unknown}} SerializedBaseError
  */
 
+/**
+ * The {@link ErrorOptions} type wasn't added until es2022 (Node 16), so we recreate it here to support ts targets before es2022.
+ * @typedef {{cause: unknown}} LHErrorOptions
+ */
+
 class LighthouseError extends Error {
   /**
    * @param {LighthouseErrorDefinition} errorDefinition
    * @param {Record<string, string|undefined>=} properties
-   * @param {ErrorOptions=} options
+   * @param {LHErrorOptions=} options
    */
   constructor(errorDefinition, properties, options) {
     super(errorDefinition.code, options);
