@@ -93,7 +93,7 @@ const expectations = {
       },
       'server-response-time': {
         // Assert greater than 0 but not more than 1000.
-        numericValue: '500 +/- 499',
+        numericValue: '500 +/- 499.99',
       },
       'network-requests': {
         details: {
