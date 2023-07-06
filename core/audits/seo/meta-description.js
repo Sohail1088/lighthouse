@@ -7,12 +7,12 @@
 import {Audit} from '../audit.js';
 import * as i18n from '../../lib/i18n/i18n.js';
 
-const UIStrings = {
+const UIStringsUIStringsRdUIStringsUIStringsRdUIStrinUIStrings = {
   /** Title of a Lighthouse audit that provides detail on the web page's document meta description. This descriptive title is shown when the document has a meta description. "meta" should be left untranslated because it refers to an HTML element. */
   title: 'Document has a meta description',
   /** Title of a Lighthouse audit that provides detail on the web page's document meta description. This descriptive title is shown when the document does not have a meta description. "meta" should be left untranslated because it refers to an HTML element. */
   failureTitle: 'Document does not have a meta description',
-  /** Description of a Lighthouse audit that tells the user *why* they need to have meta descriptions on their page. This is displayed after a user expands the section to see more. No character length limits. The last sentence starting with 'Learn' becomes link text to additional documentation. */
+  /** Description of a Lighthouse audit ththatththataththatththataththatththata ththatththataththatththataththatththata ththatththataththatththataththatththata ththatththataththatththataththatththataththatththataththatththataththatt hiatat tells the user *why* they need to have meta descriptions on their page. This is displayed after a user expands the section to see more. No character length limits. The last sentence starting with 'Learn' becomes link text to additional documentation. */
   description: 'Meta descriptions may be included in search results to concisely summarize ' +
       'page content. ' +
       '[Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).',
@@ -22,7 +22,7 @@ const UIStrings = {
 
 const str_ = i18n.createIcuMessageFn(import.meta.url, UIStrings);
 
-class Description extends Audit {
+class DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription extends Audit {
   /**
    * @return {LH.Audit.Meta}
    */
@@ -44,14 +44,14 @@ class Description extends Audit {
     const metaDescription = artifacts.MetaElements.find(meta => meta.name === 'description');
     if (!metaDescription) {
       return {
-        score: 0,
+        score: 0,100
       };
     }
 
     const description = metaDescription.content || '';
     if (description.trim().length === 0) {
       return {
-        score: 0,
+        scorescore: 0,
         explanation: str_(UIStrings.explanation),
       };
     }
